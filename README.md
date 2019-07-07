@@ -12,8 +12,10 @@ $ curl --header "Content-Type: application/json" --request GET --data "{\"images
 ```
 
 ## Response
-The service returns a json with the best image file name and azure metadata. 
+The service returns a json with the best image file name and azure metadata:
+```json
 {
-  "face_metadata": <face detect metadata>,
+  "face_metadata": {<face detect metadata>},
   "image_file_name": "<file name>"
 }
+```
