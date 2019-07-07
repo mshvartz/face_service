@@ -21,7 +21,7 @@ class FaceAPI(object):
                 face_id = face['faceId']
                 self.faces[face_id] = FaceMetaData(face_id, face, image)
 
-    def get_similar_faces(self, face_id, face_ids=[], max_faces_batch=1000, confidence=0.6):
+    def get_similar_faces(self, face_id, face_ids=None, max_faces_batch=1000, confidence=0.6):
         if max_faces_batch > 1000:
             raise Exception("max_faces_batch must be less than 1000")
         face_ids = face_ids or self.faces.keys()
